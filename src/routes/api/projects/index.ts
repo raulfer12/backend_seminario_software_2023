@@ -38,13 +38,6 @@ router.get('/byid/:id',async (req, res)=>{
     }
 });
 
-/*
-router.get('/all',(_req,res)=>{
-    getProjects()
-    .then(projects=>res.json(projects))
-    .catch(ex=>res.status(500).json({error: ex?.message}))
-});*/
-
 router.post('/new', async (req,res)=> {
     try{
     const { name, description, isActive= false}= req.body;
